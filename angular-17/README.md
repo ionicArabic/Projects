@@ -1,4 +1,13 @@
-# Angular17
+# Angular17 Terminal Commands
+ ng new angular-17 --style scss --ssr true // --ssr for server side rendering 
+ 
+ ng serve --open --hmr // --hmr is hot module replacement for faster dev experience 
+ 
+ ng generate component home // generate a new component 
+ 
+ angular.json --> "skipTests": true // to skip generating test files for every component
+ 
+# Angular17 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
 
