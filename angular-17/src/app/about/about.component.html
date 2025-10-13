@@ -1,1 +1,51 @@
-<p>about works!</p>
+<div class="container my-4">
+
+  <!-- About message -->
+  <p class="bg-danger text-white p-2 rounded">about works!</p>
+
+  <!-- Buttons group -->
+  <div class="mb-3">
+    <button class="btn btn-dark me-2" (click)="log()">Click</button>
+    <button class="btn btn-danger" [attr.datauser]="user" [attr.status]="status">Click</button>
+  </div>
+
+  <!-- Input for search with two-way binding -->
+  <div class="mb-3">
+    <input type="text" placeholder="search" [(ngModel)]="searchInput" class="form-control mb-2">
+    <div>Search Input: {{ searchInput }}</div>
+  </div>
+
+  <!-- Input with event handlers -->
+  <div class="mb-3">
+    <input type="text" class="form-control mb-2" (input)="showInput($event)" (keydown.control.c)="showAlert2($event)"
+      placeholder="Input with control+c">
+    <input type="text" class="form-control" (keydown)="showAlert()" placeholder="Input with keydown alert">
+  </div>
+
+  <!-- Heading and image -->
+  <h1 class="mb-3">Test Image</h1>
+  <img [src]="imgUrl" alt="Angular logo" class="img-fluid rounded">
+
+</div>
+
+
+
+<!-- <p class="bg-danger">about works!</p>
+
+<button class="btn btn-dark" (click)="log()">
+  click
+</button>
+
+<input type="text" placeholder="search" [(ngModel)]="searchInput">
+{{searchInput}}
+<input type="text" class="form-control" (input)="showInput($event)" (keydown.control.c)="showAlert2($event)">
+
+<input type="text" class="form-control" (keydown)="showAlert()">
+
+<button class="bg-danger" [attr.datauser]="user" [attr.status]="status">
+  click
+</button>
+
+<h1>Test Image</h1>
+<img [src]="imgUrl" alt="Angular logo" />
+ -->

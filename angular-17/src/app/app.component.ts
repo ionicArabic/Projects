@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +11,7 @@ import { HomeComponent } from "./home/home.component";
 })
 export class AppComponent {
   title = 'Angular-17';
-  
+  imgUrl = 'assets/images/angular.png';
+  htmlTag = '<span>Hello span</span>'
+
 }
