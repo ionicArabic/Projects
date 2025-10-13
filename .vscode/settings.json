@@ -10,8 +10,12 @@
         }
     },
     "cSpell.words": [
+        "ampproject",
         "datauser",
+        "devkit",
+        "jsdom",
         "Mousa",
+        "popperjs",
         "prerender"
     ]
 }
