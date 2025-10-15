@@ -1,0 +1,11 @@
+<p>Products Component works!</p>
+
+<div *ngFor="let product of Products">
+  <p>{{product.name}}</p>
+</div>
+
+<div *ngFor="let product of Products">
+  <ng-container *ngIf="product.name=='Laptop'">
+    <p>{{product.name}}</p>
+  </ng-container>
+</div>
