@@ -2,15 +2,33 @@
   <span class="ms-2 d-inline-block">Products Component works!</span>
 </p>
 
-<div *ngFor="let Product of Products" class="card" style="width: 18rem;">
-  <img [src]="Product.img" class="card-img-top" alt="imageCard">
+@for( product of Products; track $index ) {
+<div class="card mt-2" style="width: 18rem;">
+  <img [src]="product.img" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">{{Product.name}}</h5>
-    <p class="card-text">{{Product.price}}
-    </p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.price }}</p>
+    <a href="#" class="btn btn-primary">order</a>
   </div>
 </div>
+} @empty {
+<p>No products available</p>
+}
+
+<!--  <div *ngFor="let Product of Products;let count = count; let i = index; let o = odd; let e = even" class="card"
+    style="width: 18rem;">
+
+    <div [ngClass]="{'bg-danger': o, 'bg-warning': e}">
+      <p>count: {{count}}</p>
+      <img [src]="Product.img" class="card-img-top" alt="imageCard">
+      <div class="card-body">
+        <h5 class="card-title">{{Product.name}}</h5>
+        <p class="card-text">{{Product.price}}
+        </p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div> -->
 
 <!-- First row: buttons 1, 2, and 3 inline -->
 <button type="button" class="btn btn-primary me-2">Button 1</button>

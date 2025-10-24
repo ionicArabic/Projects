@@ -1,12 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Interface } from 'readline';
+import { IProducts } from '../iproducts';
 
-export interface IProduct {
-  name: string;
-  price: number;
-  img: string;
-}
+
 @Component({
   selector: 'app-products',
   standalone: true,
@@ -15,15 +11,17 @@ export interface IProduct {
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
-  Products: IProduct[] = [
+  Products: IProducts[] = [
   { name: 'TV', price: 1000, img: 'assets/images/angular.png' },
   { name: 'Laptop', price: 1500, img: 'assets/images/angular.png' },
-  { name: 'Screen', price: 300, img: 'assets/images/angular.png' }
+  { name: 'Screen', price: 1300, img: 'assets/images/angular.png' }
 ];
   Products2: object[]= [
     {name: 'TV', price: 10000, img: 'tv.jpg'},
     { name: 'Laptop', price: 1500, img: 'laptop.jpg' },
     { name: 'Screen', price: 300, img: 'screen.jpg' },
+  ];
+  Products3: IProducts[]= [
   ]
 
 }
