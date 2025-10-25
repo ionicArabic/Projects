@@ -1,1 +1,7 @@
-<p>items works!</p>
+<p>Parent component works!</p>
+<app-child [dataFromParent]="userName" (childEvent)="getDataFromChild=$event" (childEvent)="log($event)"></app-child>
+
+<p>This is Parent: {{userName}}</p>
+
+<p>Test getting Data from Child!</p>
+<h2>{{getDataFromChild}}</h2>
